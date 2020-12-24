@@ -1293,7 +1293,8 @@ void CChampionshipMatch::RearrangeUserSeat(tagMatchScore score[], INT_PTR nCount
 		if (pITableFramEx->cbOnSeatUserCount>=m_wChairCount)
 		{
 			//≤È’“œ÷”–
-			for (INT_PTR nIndex=0;nIndex<m_WaitStartTable.GetCount();nIndex++)
+			INT_PTR nIndex = 0;
+			for (;nIndex<m_WaitStartTable.GetCount();nIndex++)
 			{
 				if (m_WaitStartTable[nIndex]==pITableFramEx)
 				{
