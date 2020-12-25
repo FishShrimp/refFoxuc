@@ -114,8 +114,8 @@
     <PostBuildEvent>
       <Command>if not exist ..\..\..\发布组件\服务器组件\Debug\Ansi mkdir ..\..\..\发布组件\服务器组件\Debug\Ansi
 if not exist ..\..\..\发布组件\客户端组件\Debug\Ansi mkdir ..\..\..\发布组件\客户端组件\Debug\Ansi
-copy /y ..\..\..\运行\Debug\Ansi\$(TargetFileName) ..\..\..\发布组件\服务器组件\Debug\Ansi\$(TargetFileName)
-copy /y ..\..\..\运行\Debug\Ansi\$(TargetFileName) ..\..\..\发布组件\客户端组件\Debug\Ansi\$(TargetFileName)
+copy /y ..\..\..\运行\Debug\Ansi\ProcessControlD.dll ..\..\..\发布组件\服务器组件\Debug\Ansi\ProcessControlD.dll
+copy /y ..\..\..\运行\Debug\Ansi\ProcessControlD.dll ..\..\..\发布组件\客户端组件\Debug\Ansi\ProcessControlD.dll
 </Command>
     </PostBuildEvent>
     <ResourceCompile>

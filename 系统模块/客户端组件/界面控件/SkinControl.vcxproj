@@ -114,7 +114,7 @@
     </Midl>
     <PostBuildEvent>
       <Command>if not exist ..\..\..\发布组件\客户端组件\Debug\Ansi mkdir ..\..\..\发布组件\客户端组件\Debug\Ansi
-copy /y ..\..\..\运行\Debug\Ansi\$(TargetFileName) ..\..\..\发布组件\客户端组件\Debug\Ansi\$(TargetFileName)
+copy /y ..\..\..\运行\Debug\Ansi\SkinControlD.dll ..\..\..\发布组件\客户端组件\Debug\Ansi\SkinControlD.dll
 </Command>
     </PostBuildEvent>
     <ResourceCompile>
