@@ -81,6 +81,7 @@
     <OutDir>$(Configuration)\</OutDir>
     <IntDir>$(Configuration)\</IntDir>
     <LinkIncremental>true</LinkIncremental>
+    <PostBuildEventUseInBuild>true</PostBuildEventUseInBuild>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">
     <OutDir>$(Configuration)\</OutDir>
@@ -176,8 +177,8 @@ copy /y ..\..\..\运行\Release\Ansi\$(TargetFileName) ..\..\..\发布组件\服
       <MkTypLibCompatible>false</MkTypLibCompatible>
     </Midl>
     <PostBuildEvent>
-      <Command>mkdir ..\..\..\发布组件\服务器组件\Debug\Unicode
-copy /y ..\..\..\运行\Debug\Unicode\$(TargetFileName) ..\..\..\发布组件\服务器组件\Debug\Unicode\$(TargetFileName)
+      <Command>if not exist ..\..\..\发布组件\服务器组件\Debug\Unicode  mkdir ..\..\..\发布组件\服务器组件\Debug\Unicode
+copy /Y "..\..\..\运行\Debug\Unicode\LogonServer.exe" "..\..\..\发布组件\服务器组件\Debug\Unicode\LogonServer.exe"
 </Command>
     </PostBuildEvent>
     <ResourceCompile>
