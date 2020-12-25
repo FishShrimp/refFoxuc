@@ -230,7 +230,8 @@ WORD CUserItemElement::GetExperienceLevel(DWORD dwExperience)
 		DWORD dwLevelValue=0L;
 
 		//µ»º∂º∆À„
-		for (WORD wUserLevel=1;wUserLevel<60L;wUserLevel++)
+		WORD wUserLevel = 1;
+		for (;wUserLevel<60L;wUserLevel++)
 		{
 			dwIncrease+=wUserLevel*30L;
 			dwLevelValue=dwLevelValue+dwIncrease;

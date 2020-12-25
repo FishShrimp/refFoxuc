@@ -128,7 +128,7 @@
       <MkTypLibCompatible>false</MkTypLibCompatible>
     </Midl>
     <PostBuildEvent>
-      <Command>mkdir ..\..\..\发布组件\客户端组件\Debug\Ansi
+      <Command>if not exist ..\..\..\发布组件\客户端组件\Debug\Ansi mkdir ..\..\..\发布组件\客户端组件\Debug\Ansi
 copy /y ..\..\..\运行\Debug\Ansi\$(TargetFileName) ..\..\..\发布组件\客户端组件\Debug\Ansi\$(TargetFileName)
 </Command>
     </PostBuildEvent>
@@ -194,8 +194,8 @@ copy /y ..\..\..\运行\Release\Ansi\$(TargetFileName) ..\..\..\发布组件\客
       <MkTypLibCompatible>false</MkTypLibCompatible>
     </Midl>
     <PostBuildEvent>
-      <Command>mkdir ..\..\..\发布组件\客户端组件\Debug\Unicode
-copy /y ..\..\..\运行\Debug\Unicode\$(TargetFileName) ..\..\..\发布组件\客户端组件\Debug\Unicode\$(TargetFileName)
+      <Command>if not exist mkdir ..\..\..\发布组件\客户端组件\Debug\Unicode
+copy /y ..\..\..\运行\Debug\Unicode\GamePlaza.exe ..\..\..\发布组件\客户端组件\Debug\Unicode\GamePlaza.exe
 </Command>
     </PostBuildEvent>
     <ResourceCompile>

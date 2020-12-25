@@ -106,13 +106,14 @@
       <SubSystem>Windows</SubSystem>
       <ImportLibrary>../../链接库/Ansi/SkinControlD.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalOptions> /SAFESEH:NO %(AdditionalOptions)</AdditionalOptions>
     </Link>
     <Midl>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>false</MkTypLibCompatible>
     </Midl>
     <PostBuildEvent>
-      <Command>mkdir ..\..\..\发布组件\客户端组件\Debug\Ansi
+      <Command>if not exist ..\..\..\发布组件\客户端组件\Debug\Ansi mkdir ..\..\..\发布组件\客户端组件\Debug\Ansi
 copy /y ..\..\..\运行\Debug\Ansi\$(TargetFileName) ..\..\..\发布组件\客户端组件\Debug\Ansi\$(TargetFileName)
 </Command>
     </PostBuildEvent>
@@ -175,14 +176,15 @@ copy /y ..\..\..\运行\Release\Ansi\$(TargetFileName) ..\..\..\发布组件\客
       <SubSystem>Windows</SubSystem>
       <ImportLibrary>../../链接库/Unicode/SkinControlD.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalOptions> /SAFESEH:NO %(AdditionalOptions)</AdditionalOptions>
     </Link>
     <Midl>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MkTypLibCompatible>false</MkTypLibCompatible>
     </Midl>
     <PostBuildEvent>
-      <Command>mkdir ..\..\..\发布组件\客户端组件\Debug\Unicode
-copy /y ..\..\..\运行\Debug\Unicode\$(TargetFileName) ..\..\..\发布组件\客户端组件\Debug\Unicode\$(TargetFileName)
+      <Command>if not exist mkdir ..\..\..\发布组件\客户端组件\Debug\Unicode
+copy /y ..\..\..\运行\Debug\Unicode\SkinControlD.dll ..\..\..\发布组件\客户端组件\Debug\Unicode\SkinControlD.dll
 </Command>
     </PostBuildEvent>
     <ResourceCompile>

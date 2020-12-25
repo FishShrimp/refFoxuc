@@ -112,8 +112,8 @@
       <MkTypLibCompatible>false</MkTypLibCompatible>
     </Midl>
     <PostBuildEvent>
-      <Command>mkdir ..\..\..\发布组件\服务器组件\Debug\Ansi
-mkdir ..\..\..\发布组件\客户端组件\Debug\Ansi
+      <Command>if not exist ..\..\..\发布组件\服务器组件\Debug\Ansi mkdir ..\..\..\发布组件\服务器组件\Debug\Ansi
+if not exist ..\..\..\发布组件\客户端组件\Debug\Ansi mkdir ..\..\..\发布组件\客户端组件\Debug\Ansi
 copy /y ..\..\..\运行\Debug\Ansi\$(TargetFileName) ..\..\..\发布组件\服务器组件\Debug\Ansi\$(TargetFileName)
 copy /y ..\..\..\运行\Debug\Ansi\$(TargetFileName) ..\..\..\发布组件\客户端组件\Debug\Ansi\$(TargetFileName)
 </Command>
@@ -185,10 +185,10 @@ copy /y ..\..\..\运行\Release\Ansi\$(TargetFileName) ..\..\..\发布组件\客
       <MkTypLibCompatible>false</MkTypLibCompatible>
     </Midl>
     <PostBuildEvent>
-      <Command>mkdir ..\..\..\发布组件\服务器组件\Debug\Unicode
-mkdir ..\..\..\发布组件\客户端组件\Debug\Unicode
-copy /y ..\..\..\运行\Debug\Unicode\$(TargetFileName) ..\..\..\发布组件\服务器组件\Debug\Unicode\$(TargetFileName)
-copy /y ..\..\..\运行\Debug\Unicode\$(TargetFileName) ..\..\..\发布组件\客户端组件\Debug\Unicode\$(TargetFileName)
+      <Command>if not exist mkdir ..\..\..\发布组件\服务器组件\Debug\Unicode
+if not exist mkdir ..\..\..\发布组件\客户端组件\Debug\Unicode
+copy /y ..\..\..\运行\Debug\Unicode\ServiceCoreD.dll ..\..\..\发布组件\服务器组件\Debug\Unicode\ServiceCoreD.dll
+copy /y ..\..\..\运行\Debug\Unicode\ServiceCoreD.dll ..\..\..\发布组件\客户端组件\Debug\Unicode\ServiceCoreD.dll
 </Command>
     </PostBuildEvent>
     <ResourceCompile>

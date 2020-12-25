@@ -83,7 +83,7 @@
     <OutDir>$(Configuration)\</OutDir>
     <IntDir>$(Configuration)\</IntDir>
     <LinkIncremental>true</LinkIncremental>
-    <PostBuildEventUseInBuild>false</PostBuildEventUseInBuild>
+    <PostBuildEventUseInBuild>true</PostBuildEventUseInBuild>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">
     <OutDir>$(Configuration)\</OutDir>
@@ -116,8 +116,8 @@
       <MkTypLibCompatible>false</MkTypLibCompatible>
     </Midl>
     <PostBuildEvent>
-      <Command>mkdir ..\..\..\发布组件\服务器组件\Debug\Ansi
-copy /y ..\..\..\运行\Debug\Ansi\$(TargetFileName) ..\..\..\发布组件\服务器组件\Debug\Ansi\$(TargetFileName)
+      <Command>if not exist ..\..\..\发布组件\服务器组件\Debug\Ansi mkdir ..\..\..\发布组件\服务器组件\Debug\Ansi
+copy /Y ..\..\..\运行\Debug\Ansi\MatchServiceD.dll ..\..\..\发布组件\服务器组件\Debug\Ansi\MatchServiceD.dll
 </Command>
     </PostBuildEvent>
     <ResourceCompile>
@@ -185,8 +185,8 @@ copy /y ..\..\..\运行\Release\Ansi\$(TargetFileName) ..\..\..\发布组件\服
       <MkTypLibCompatible>false</MkTypLibCompatible>
     </Midl>
     <PostBuildEvent>
-      <Command>mkdir ..\..\..\发布组件\服务器组件\Debug\Unicode
-copy /y ..\..\..\运行\Debug\Unicode\$(TargetFileName) ..\..\..\发布组件\服务器组件\Debug\Unicode\$(TargetFileName)
+      <Command>if not exist mkdir ..\..\..\发布组件\服务器组件\Debug\Unicode
+copy /y ..\..\..\运行\Debug\Unicode\MatchServiceD.dll ..\..\..\发布组件\服务器组件\Debug\Unicode\MatchServiceD.dll
 </Command>
     </PostBuildEvent>
     <ResourceCompile>
