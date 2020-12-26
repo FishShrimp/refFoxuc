@@ -796,7 +796,8 @@ bool CCollocateProxy::UpdateControlStatus()
 	}
 
 	//…Ë÷√—°‘Ò
-	for (INT i=0;i<m_cmProxyType.GetCount();i++)
+	INT i = 0;
+	for (;i<m_cmProxyType.GetCount();i++)
 	{
 		if (m_cmProxyType.GetItemData(i)==m_cbProxyType)
 		{

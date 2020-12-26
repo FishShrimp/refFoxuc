@@ -138,7 +138,7 @@ protected:
 	//绘画背景
 	BOOL OnEraseBkgnd(CDC * pDC);
 	//按键测试
-	UINT OnNcHitTest(CPoint Point);
+	LRESULT  OnNcHitTest(CPoint Point);
 	//位置消息
 	VOID OnSize(UINT nType, INT cx, INT cy);
 	//位置消息

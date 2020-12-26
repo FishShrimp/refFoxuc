@@ -7,7 +7,7 @@
 #include "..\GamePlaza.h"
 
 // 如果编译这个地方报错，请改成和你VS对应的安装目录
-#include <C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\atlmfc\src\mfc\occimpl.h>
+//#include <C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\atlmfc\src\mfc\occimpl.h>
 
 #undef AFX_DATA
 #define AFX_DATA AFX_DATA_EXPORT

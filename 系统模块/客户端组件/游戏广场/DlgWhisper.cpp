@@ -434,7 +434,8 @@ bool CDlgWhisper::CompareUserItem(DWORD dwUserID[], WORD wUserCount)
 		DWORD dwUserItemID=m_ClientUserItemArray[i]->GetUserID();
 
 		//用户对比
-		for (WORD j=0;j<wUserCount;j++) 
+		WORD j = 0;
+		for (;j<wUserCount;j++) 
 		{
 			if (dwUserID[j]==dwUserItemID) break;
 		}

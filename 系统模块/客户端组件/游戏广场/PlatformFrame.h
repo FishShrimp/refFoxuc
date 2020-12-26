@@ -263,7 +263,7 @@ protected:
 	//绘画背景
 	BOOL OnEraseBkgnd(CDC * pDC);
 	//按键测试
-	UINT OnNcHitTest(CPoint Point);
+	LRESULT  OnNcHitTest(CPoint Point);
 	//时间消息
 	VOID OnTimer(UINT_PTR nIDEvent);
 	//位置消息

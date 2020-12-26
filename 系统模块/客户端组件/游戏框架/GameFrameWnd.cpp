@@ -463,7 +463,7 @@ BOOL CGameFrameWnd::OnEraseBkgnd(CDC * pDC)
 }
 
 //∞¥º¸≤‚ ‘
-UINT CGameFrameWnd::OnNcHitTest(CPoint Point)
+LRESULT  CGameFrameWnd::OnNcHitTest(CPoint Point)
 {
 	//∞¥≈•≤‚ ‘
 	if (m_bMaxShow==false)

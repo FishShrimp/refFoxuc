@@ -16,9 +16,9 @@
 #include <DSound.h>
 
 //OGL 文件
-#include <GL/GL.h>		
-#include <GL/GLU.h>
-#include <GL/GLAux.h>
+//#include <GL/GL.h>		
+//#include <GL/GLU.h>
+//#include <GL/GLAux.h>
 
 //平台文件
 #include "..\..\..\系统模块\全局定义\Platform.h"

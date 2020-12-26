@@ -1237,7 +1237,7 @@ BOOL CPlatformFrame::OnEraseBkgnd(CDC * pDC)
 }
 
 //∞¥º¸≤‚ ‘
-UINT CPlatformFrame::OnNcHitTest(CPoint Point)
+LRESULT  CPlatformFrame::OnNcHitTest(CPoint Point)
 {
 	//∞¥≈•≤‚ ‘
 	if (m_bMaxShow==false)
